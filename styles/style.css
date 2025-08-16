@@ -1,0 +1,105 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: Arial, sans-serif; background: #f5f5f5; color: #333; }
+
+/* Header */
+header { background: #003366; color: white; }
+.header-top {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 0.5rem 1rem;
+}
+.logo img { height: 75px; }
+.company-address p { margin: 0; font-size: 0.9rem; }
+
+nav ul {
+  display: flex; justify-content: center; gap: 1.5rem;
+  list-style: none; background: #002244; padding: 0.5rem;
+}
+nav ul li a {
+  font-weight: bold;
+  color: white;  
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  text-shadow: 
+    -1px -1px 0 orange,  
+     1px -1px 0 orange,
+    -1px  1px 0 orange,
+     1px  1px 0 orange; /* Creates an outline */
+}
+
+nav ul li a:hover {
+  background-color: orange;
+  color: #003366;
+  text-shadow: none; /* Remove outline on hover if you want */
+}
+
+/* Hero Section */
+.hero-container {
+  position: relative; text-align: center; overflow: hidden;
+}
+.hero-img { width: 100%; height: 500px; object-fit: cover; }
+.hero-btn {
+  position: absolute; top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  background: orange; color: white; padding: 1rem 2rem;
+  font-size: 1.2rem; font-weight: bold; border: none; border-radius: 5px;
+  cursor: pointer; transition: background 0.3s;
+}
+.hero-btn:hover { background: #cc8400; }
+
+.cruise-name, .cruise-company {
+  color: #006994;   /* Ocean blue */
+  font-weight: bold;
+  font-style: italic;
+}
+
+/* Upcoming Cruises */
+#upcomingSection { padding: 2rem 1rem; text-align: center; }
+#upcomingSection h2 { margin-bottom: 1.5rem; }
+.cruise-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 1rem; max-width: 1000px; margin: 0 auto;
+}
+.cruise-card {
+  background: white; border-radius: 8px; overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+.cruise-card:hover { transform: scale(1.05); }
+.cruise-card img { width: 100%; height: 200px; object-fit: cover; }
+.cruise-card .card-body { padding: 0.8rem; }
+.cruise-card h3 { margin-bottom: 0.3rem; }
+.cruise-card p { color: gray; font-size: 0.9rem; }
+
+/* Modal */
+.modal {
+  display: none; position: fixed; z-index: 1000;
+  left: 0; top: 0; width: 100%; height: 100%;
+  background: rgba(0,0,0,0.5);
+}
+.modal-content {
+  background: white; padding: 1.5rem; border-radius: 8px;
+  max-width: 400px; margin: 10% auto; position: relative;
+}
+.modal-content span {
+  position: absolute; right: 10px; top: 10px;
+  font-size: 20px; cursor: pointer;
+}
+.modal-content form input {
+  width: 100%; padding: 0.5rem; margin-bottom: 0.8rem;
+}
+.modal-content form button {
+  background: #003366; color: white; padding: 0.6rem;
+  border: none; width: 100%; cursor: pointer;
+}
+.modal-content form button:hover { background: #002244; }
+
+/* Footer */
+footer {
+  display: flex; justify-content: space-between;
+  align-items: center; background: #003366; color: white;
+  padding: 1rem;
+}
+.footer-right a {
+  color: white; margin-left: 1rem; font-size: 1.2rem;
+}
+.footer-right a:hover { color: orange; }

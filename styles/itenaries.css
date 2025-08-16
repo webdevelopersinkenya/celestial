@@ -1,0 +1,229 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f4f9ff;
+  color: #003366;
+}
+
+/* Header */
+header {
+  background: #003366;
+  color: white;
+}
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+}
+.logo img {
+  height: 75px;
+}
+.company-address p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  list-style: none;
+  background: #002244;
+  padding: 0.5rem;
+}
+nav ul li a {
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  text-shadow:
+    -1px -1px 0 orange,
+    1px -1px 0 orange,
+    -1px  1px 0 orange,
+    1px  1px 0 orange;
+}
+nav ul li a:hover {
+  background-color: orange;
+  color: #003366;
+  text-shadow: none;
+}
+
+h1 {
+  text-align: center;
+  font-weight: bold;
+  font-style: italic;
+  color: #0077be;
+}
+.white-title {
+  color: white;
+}
+
+.company-info p,
+.company-info a {
+  margin: 0;
+  color: white;
+}
+
+main {
+  padding: 20px;
+}
+
+.page-title {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #005f99;
+}
+
+/* Itinerary Grid */
+.itinerary-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+.itinerary-card {
+  background: #f5f9ff;
+  border: 2px solid #0077b6;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.itinerary-card h2 {
+  color: #0077b6;
+  font-style: italic;
+}
+.itinerary-card p {
+  margin: 5px 0;
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+table thead {
+  background: #005f99;
+  color: white;
+}
+table th,
+table td {
+  padding: 12px;
+  border: 1px solid #ddd;
+}
+table tbody tr:nth-child(even) {
+  background: #eaf4ff;
+}
+table tbody tr:hover {
+  background: #d4ecff;
+}
+
+/* ===== Markets & Ships Layout ===== */
+#markets {
+  text-align: center;
+  padding: 20px;
+}
+.market-section {
+  margin-bottom: 40px;
+  text-align: center;
+}
+.market-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #002244;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: bold;   /* Makes text bold */
+  font-style: italic;  /* Makes text italic */
+  -webkit-text-stroke: 1px #b8860b; /* Dark golden border around letters */
+}
+.market-section, .brand-section {
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #005f99;
+  font-style: italic; /* This makes the text italic */
+}
+
+.section-title {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color:#002244;
+  font-weight: bold;   /* Makes text bold */
+  font-style: italic;  /* Makes text italic */
+  -webkit-text-stroke: 1px #b8860b; /* Dark golden border around letters */
+}
+.ships-row {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 1rem;
+  overflow-x: auto;
+  padding: 0.5rem;
+}
+
+.ship-card {
+  min-width: 200px;
+  background: #f9f9f9;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  flex: 0 0 auto;
+}
+
+.contacts {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+/* Horizontal row of ships */
+.ships-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+.ship-card {
+  background: #fff;
+  border: 1px solid goldenrod;
+  border-radius: 12px;
+  padding: 15px;
+  width: 220px;
+  text-align: left;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+.ship-card:hover {
+  transform: translateY(-5px);
+}
+.ship-card h3 {
+  margin-top: 0;
+  font-size: 1.2rem;
+  color: #002244;
+  font-style: italic; /* Makes text italic */
+}
+
+.ship-card p {
+  margin: 4px 0;
+  font-size: 0.9rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color:black;
+}
+
+/* Footer */
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #003366;
+  color: white;
+  padding: 1rem;
+}
+.footer-right a {
+  color: white;
+  margin-left: 1rem;
+  font-size: 1.2rem;
+}
+.footer-right a:hover {
+  color: orange;
+}

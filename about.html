@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cruise Hub</title>
+  <link rel="stylesheet" href="styles/itenaries.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <h1>Celestial Cruises</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#homeSection">Home</a></li>
+        <li><a href="#mapSection">Map</a></li>
+        <li><a href="#itinerarySection">Itineraries</a></li>
+        <li><a href="#bookingModal" id="openBookingNav">Book Now</a></li>
+      </ul>
+    </nav>
+    <div class="search-container">
+      <input type="text" id="searchBar" placeholder="Search cruise lines, ships, or ports..." />
+    </div>
+  </header>
+
+  <main id="homeSection">
+    <section id="mapSection">
+      <h2>Live Ship Map</h2>
+      <div id="map"></div>
+    </section>
+    <section id="itinerarySection">
+      <h2>Upcoming Cruises</h2>
+      <div id="itineraryList"></div>
+    </section>
+  </main>
+
+  <!-- Booking Modal -->
+  <div id="bookingModal" class="modal">
+    <div class="modal-content">
+      <span id="closeModal">&times;</span>
+      <h3>Book Your Cruise</h3>
+      <form id="bookingForm">
+        <input type="text" id="name" placeholder="Your Name" required />
+        <input type="email" id="email" placeholder="Your Email" required />
+        <button type="submit">Confirm Booking</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="script/java.js"></script>
+</body>
+</html>
