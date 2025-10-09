@@ -1,10 +1,7 @@
 // Booking Modal
 const modal = document.getElementById('bookingModal');
 const closeModal = document.getElementById('closeModal');
-document.getElementById('openBookingNav').addEventListener('click', e => {
-  e.preventDefault();
-  modal.style.display = 'block';
-});
+
 document.getElementById('openBookingHero').addEventListener('click', e => {
   e.preventDefault();
   modal.style.display = 'block';

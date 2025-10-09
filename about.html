@@ -4,52 +4,89 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Cruise Hub</title>
-  <link rel="stylesheet" href="styles/itenaries.css" />
+  <link rel="stylesheet" href="styles/style.css" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+  <!-- Header -->
   <header>
-    <div class="logo">
-      <h1>Celestial Cruises</h1>
+    <div class="header-top">
+      <div class="logo">
+        <img src="images/logo.PNG" alt="Celelstial Cruises Logo" />
+      </div>
+      <h1><b><i>Deseret Cruises International</h1></i></b>
+      <div class="company-address">
+        <p><i>Email: info@deseretcruises.com</p></i>
+        <p><i>Phone: +254727625340,</p></i>
+        <p><i>P.O.BOX:46162,</p></i>
+        <p><i>Nairobi-Kenya.</p></i>
+        
+      </div>
     </div>
     <nav>
       <ul>
-        <li><a href="#homeSection">Home</a></li>
-        <li><a href="#mapSection">Map</a></li>
-        <li><a href="#itinerarySection">Itineraries</a></li>
-        <li><a href="#bookingModal" id="openBookingNav">Book Now</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="maps.html">Map</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="itenaries.html">Itineraries</a></li>
+        <li><a href="contact.html" >Contact Us</a></li>
       </ul>
     </nav>
-    <div class="search-container">
-      <input type="text" id="searchBar" placeholder="Search cruise lines, ships, or ports..." />
-    </div>
   </header>
+  <!-- About Us Content -->
+  <section id="about-us">
+  <h2><b><i>About Us</i></b></h2>
+  <p>
+    Deseret Cruises International was founded in 2024 with a vision to offer exceptional cruise experiences while uplifting lives. Born from a heartfelt conversation between a local Bishop and dedicated members of The Church of Jesus Christ of Latter-day Saints working at MSC Cruises, the idea emerged from a deep concern for unemployment and the desire to create meaningful opportunities. Observing neighbors traveling in luxurious cruises across Europe and the United States, the Bishop asked: <em>“Why not us too?”</em>
+  </p>
+  <p>
+    Guided by faith, compassion, and a commitment to service, our founders combined their expertise in hospitality, finance, and operations to build a company that values safety, comfort, and unforgettable journeys. Deseret Cruises International, our signature cruise line, was born — a company dedicated not only to leisure and adventure but also to creating dignified employment, fostering spiritual enrichment, and connecting communities. From humble beginnings, Deseret Cruises International continues to grow, serving travelers worldwide while inspiring memorable experiences at sea.
+  </p>
+</section>
 
-  <main id="homeSection">
-    <section id="mapSection">
-      <h2>Live Ship Map</h2>
-      <div id="map"></div>
-    </section>
-    <section id="itinerarySection">
-      <h2>Upcoming Cruises</h2>
-      <div id="itineraryList"></div>
-    </section>
-  </main>
 
-  <!-- Booking Modal -->
-  <div id="bookingModal" class="modal">
-    <div class="modal-content">
-      <span id="closeModal">&times;</span>
-      <h3>Book Your Cruise</h3>
-      <form id="bookingForm">
-        <input type="text" id="name" placeholder="Your Name" required />
-        <input type="email" id="email" placeholder="Your Email" required />
-        <button type="submit">Confirm Booking</button>
-      </form>
+  <div class="directors">
+    <!-- First Director -->
+    <div class="director first-director">
+      <img src="images/welly.jpeg" alt="Welly Omondi">
+      <div class="bio">
+        <h3><b><i>Welly Omondi</i></b></h3>
+        <p><i>Co-founder & CEO. Welly has over 15 years of experience in shippinglines and hospitality management, leading our company with vision and dedication.</i></p>
+      </div>
+    </div>
+
+    <!-- Second Director -->
+    <div class="director shift-left">
+      <img src="images/gab.jpg" alt="Gabriel Aura Mirah">
+      <div class="bio">
+        <h3><b><i>Gabriel A. Mirah</i></b></h3>
+        <p><i>Co-founder & CFO, Gabriel leverages his expertise in business operations and technology to drive the company’s growth and ensure sustainable operations.</i></p>
+      </div>
+    </div>
+
+    <!-- Third Director -->
+    <div class="director">
+      <img src="images/ngarari.jpeg" alt="Johnstone Mwaura Ngarari">
+      <div class="bio">
+        <h3><b><i>Johnstone Ngarari</i></b></h3>
+        <p><i>  Chief Architect, owner of Mwaura & Builders, and director overseeing the team to deliver seamless client experiences and achieve great visions.</i></p>
+      </div>
     </div>
   </div>
-
-  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-  <script src="script/java.js"></script>
+</section>
+  <footer>
+    <div class="footer-left">
+      <p><i>&copy;2024@DeseretCruisesInternational.From Shore to More.</p></i>
+    </div>
+    <div class="footer-right">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+    </div>
+  </footer>
+<script src="script/hero.js"></script>
+  <script src="script/bookings.js"></script>
+  <script src="script/confirm.js"></script>
 </body>
 </html>

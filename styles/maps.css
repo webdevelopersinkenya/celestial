@@ -1,58 +1,191 @@
-/* Full-screen map */
-
-/* Header */
-header { background: #003366; color: white; }
-.header-top {
-  display: flex; justify-content: space-between; align-items: center;
-  padding: 0.5rem 1rem;
+/* ===== GENERAL RESET ===== */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+  scroll-behavior: smooth;
 }
-.logo img { height: 75px; }
-.company-address p { margin: 0; font-size: 0.9rem; }
+
+/* ===== HEADER ===== */
+header {
+  background: #003366;
+  color: white;
+  position: relative;
+  z-index: 1000;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.logo img {
+  height: 75px;
+  max-width: 100%;
+}
+
+.company-address p {
+  margin: 0;
+  font-size: 0.9rem;
+  text-align: right;
+}
+
+/* ===== NAVIGATION ===== */
+nav {
+  background: #002244;
+}
 
 nav ul {
-  display: flex; justify-content: center; gap: 1.5rem;
-  list-style: none; background: #002244; padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  list-style: none;
+  padding: 0.5rem;
+  margin: 0;
+  transition: all 0.3s ease;
 }
+
 nav ul li a {
   font-weight: bold;
-  color: white;  
+  color: white;
   text-decoration: none;
-  padding: 0.5rem 1rem;
-  text-shadow: 
-    -1px -1px 0 orange,  
+  padding: 0.6rem 1.2rem;
+  border-radius: 5px;
+  display: block;
+  text-shadow:
+    -1px -1px 0 orange,
      1px -1px 0 orange,
     -1px  1px 0 orange,
-     1px  1px 0 orange; /* Creates an outline */
+     1px  1px 0 orange;
 }
 
 nav ul li a:hover {
   background-color: orange;
   color: #003366;
-  text-shadow: none; /* Remove outline on hover if you want */
-}
-body, html {
-  margin: 0;
-  padding: 0;
-  height: 100%;
+  text-shadow: none;
 }
 
-#map {
+/* ===== HAMBURGER MENU (MOBILE) ===== */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+  width: 30px;
+  height: 25px;
+}
+
+.menu-toggle span {
+  height: 3px;
   width: 100%;
-  height: 100vh;
+  background: white;
+  margin-bottom: 5px;
+  border-radius: 3px;
+  transition: 0.3s;
 }
 
-/* Popup content styling */
+/* ===== MAP SECTION ===== */
+#map {
+  height: 600px;
+  width: 100%;
+}
+
 .popup-content {
   font-size: 14px;
   line-height: 1.4;
 }
-/* Footer */
+
+/* ===== FOOTER ===== */
 footer {
-  display: flex; justify-content: space-between;
-  align-items: center; background: #003366; color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #003366;
+  color: white;
   padding: 1rem;
+  flex-wrap: wrap;
+  text-align: center;
 }
+
 .footer-right a {
-  color: white; margin-left: 1rem; font-size: 1.2rem;
+  color: white;
+  margin-left: 1rem;
+  font-size: 1.2rem;
+  text-decoration: none;
 }
-.footer-right a:hover { color: orange; }
+
+.footer-right a:hover {
+  color: orange;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 992px) {
+  .header-top {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .company-address p {
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+    display: none;
+    background: #002244;
+    width: 100%;
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+
+  nav ul li a {
+    width: 100%;
+    text-align: center;
+  }
+
+  footer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-right {
+    margin-top: 0.5rem;
+  }
+
+  #map {
+    height: 450px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo img {
+    height: 55px;
+  }
+
+  #map {
+    height: 350px;
+  }
+
+  nav ul li a {
+    font-size: 0.9rem;
+  }
+}

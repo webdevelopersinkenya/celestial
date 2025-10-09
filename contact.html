@@ -4,52 +4,86 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Cruise Hub</title>
-  <link rel="stylesheet" href="styles/itenaries.css" />
+  <link rel="stylesheet" href="styles/style.css" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+  <!-- Header -->
   <header>
-    <div class="logo">
-      <h1>Celestial Cruises</h1>
+    <div class="header-top">
+      <div class="logo">
+        <img src="images/logo.PNG" alt="Celelstial Cruises Logo" />
+      </div>
+      <h1><b><i>Deseret Cruises International</h1></i></b>
+      <div class="company-address">
+        <p><i>Email: info@deseretcruises.com</p></i>
+        <p><i>Phone: +254727625340,</p></i>
+        <p><i>P.O.BOX:46162,</p></i>
+        <p><i>Nairobi-Kenya.</p></i>
+        
+      </div>
     </div>
     <nav>
       <ul>
-        <li><a href="#homeSection">Home</a></li>
-        <li><a href="#mapSection">Map</a></li>
-        <li><a href="#itinerarySection">Itineraries</a></li>
-        <li><a href="#bookingModal" id="openBookingNav">Book Now</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="maps.html">Map</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="itenaries.html">Itineraries</a></li>
+        <li><a href="contact.html" >Contact Us</a></li>
       </ul>
     </nav>
-    <div class="search-container">
-      <input type="text" id="searchBar" placeholder="Search cruise lines, ships, or ports..." />
-    </div>
   </header>
+  <main>
+    <section id="contact-us">
+      <h2><b><i>Contact Us</i></b></h2>
+      <p><b><i>Have questions or want to book a cruise? Reach out to us and we'll get back to you as soon as possible.</i></b></p>
 
-  <main id="homeSection">
-    <section id="mapSection">
-      <h2>Live Ship Map</h2>
-      <div id="map"></div>
-    </section>
-    <section id="itinerarySection">
-      <h2>Upcoming Cruises</h2>
-      <div id="itineraryList"></div>
+      <div class="contact-container">
+        <!-- Contact Form -->
+        <form action="https://docs.google.com/forms/d/e/1FAIpQLSdXXXXX/formResponse" method="POST" target="_blank">
+          <label for="name"><b><i>Full Name</i></b></label>
+          <input type="text" id="name" name="entry.123456" placeholder="Your full name" required>
+
+          <label for="email"><b><i>Email Address</i></b></label>
+          <input type="email" id="email" name="entry.234567" placeholder="Your email address" required>
+
+          <label for="message"><b><i>Message</i></b></label>
+          <textarea id="message" name="entry.345678" placeholder="Your message" rows="5" required></textarea>
+
+          <button type="submit">Send Message</button>
+        </form>
+
+        <!-- Contact Info -->
+        <div class="contact-info">
+          <h3><b><i>Our Contact Details</i></b></h3>
+          <p><strong><b><i>Phone:</i></b></strong><i> +1 (800) 123-4567</i></p>
+          <p><strong><b><i>Email:</i></b></strong><i> info@deseretcruises.com</i></p>
+          <p><strong><b><i>Address:</i></b></strong><i>123 Ocean View Blvd, Salt Lake City, UT</i> </p>
+
+          <h3><b><i>Follow Us</i></b></h3>
+          <p>
+            <a href="#">Facebook</a> |
+            <a href="#">Linkedin</a> |
+            <a href="#">Twitter</a>
+          </p>
+        </div>
+      </div>
     </section>
   </main>
 
-  <!-- Booking Modal -->
-  <div id="bookingModal" class="modal">
-    <div class="modal-content">
-      <span id="closeModal">&times;</span>
-      <h3>Book Your Cruise</h3>
-      <form id="bookingForm">
-        <input type="text" id="name" placeholder="Your Name" required />
-        <input type="email" id="email" placeholder="Your Email" required />
-        <button type="submit">Confirm Booking</button>
-      </form>
+  <footer>
+    <div class="footer-left">
+      <p><i>&copy;2024@DeseretCruisesInternational.From Shore to More.</p></i>
     </div>
-  </div>
-
-  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-  <script src="script/java.js"></script>
+    <div class="footer-right">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+    </div>
+  </footer>
+<script src="script/hero.js"></script>
+  <script src="script/bookings.js"></script>
+  <script src="script/confirm.js"></script>
 </body>
 </html>

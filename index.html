@@ -15,9 +15,9 @@
       <div class="logo">
         <img src="images/logo.PNG" alt="Celelstial Cruises Logo" />
       </div>
-      <h1><b><i>Celestial Cruises</h1></i></b>
+      <h1><b><i>Deseret Cruises International</h1></i></b>
       <div class="company-address">
-        <p><i>Email: info@celestialcruises.com</p></i>
+        <p><i>Email: info@deseretcruises.com</p></i>
         <p><i>Phone: +254727625340,</p></i>
         <p><i>P.O.BOX:46162,</p></i>
         <p><i>Nairobi-Kenya.</p></i>
@@ -28,42 +28,129 @@
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="maps.html">Map</a></li>
+        <li><a href="about.html">About Us</a></li>
         <li><a href="itenaries.html">Itineraries</a></li>
-        <li><a href="#bookingModal" id="openBookingNav">Book Now</a></li>
+        <li><a href="contact.html" >Contact Us</a></li>
       </ul>
     </nav>
   </header>
 
   <!-- Hero Section -->
   <section id="homeSection">
-    <div class="hero-container">
-      <img src="images/ship10.jpg" alt="Cruise Ship" class="hero-img" />
-      <button class="hero-btn" id="openBookingHero">Book Now</button>
-    </div>
-  </section>
+  <div class="hero-container">
+    <!-- Slides -->
+    <img src="images/ship1.jpg" alt="Cruise Ship" class="hero-img active" />
+    <img src="images/ship2.jpg" alt="Cruise Ship" class="hero-img" />
+    <img src="images/ship3.jpg" alt="Cruise Ship" class="hero-img" />
+    <img src="images/ship4.jpg" alt="Cruise Ship" class="hero-img" />
+
+    <!-- Book Button -->
+    <button class="hero-btn" id="openBookingHero">Book Now</button>
+
+    <!-- Navigation Arrows -->
+    <button class="slide-btn prev">&#10094;</button>
+    <button class="slide-btn next">&#10095;</button>
+
+    <!-- Dots Indicators -->
+    <div class="dots-container"></div>
+  </div>
+</section>
 
   <!-- Upcoming Cruises -->
   <section id="upcomingSection">
    <h2 style="color:#003366;"><b><i>Upcoming Cruises:</i></b></h2>
     <div class="cruise-grid" id="cruiseList"></div>
   </section>
-  <!-- Booking Modal -->
-  <div id="bookingModal" class="modal">
-    <div class="modal-content">
-      <span id="closeModal">&times;</span>
-      <h3>Book Your Cruise</h3>
-      <form id="bookingForm">
-        <input type="text" id="name" placeholder="Your Name" required />
-        <input type="email" id="email" placeholder="Your Email" required />
-        <button type="submit">Confirm Booking</button>
-      </form>
-    </div>
-  </div>
+  <!-- ====== CRUISE BOOKING MODAL ====== -->
+<div id="bookingModal" class="modal">
+  <div class="modal-content">
+    <span id="closeModal">&times;</span>
+    <h3>Book Your Dream Cruise</h3>
 
+    <form id="bookingForm">
+      <!-- Passenger Information -->
+      <h4>Passenger Information</h4>
+      <label for="fullName">Full Name:</label>
+      <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required>
+
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="phone" placeholder="+1 234 567 890" required>
+
+      <label for="nationality">Nationality:</label>
+      <input type="text" id="nationality" name="nationality" placeholder="e.g., Kenyan" required>
+
+      <label for="passport">Passport Number:</label>
+      <input type="text" id="passport" name="passport" placeholder="Enter your passport number" required>
+
+      <!-- Cruise Details -->
+      <h4>Cruise Details</h4>
+      <label for="cruiseLine">Cruise Line:</label>
+      <select id="cruiseLine" name="cruiseLine" required>
+        <option value="">-- Select Cruise Line --</option>
+        <option value="Royal Caribbean">Royal Caribbean</option>
+        <option value="Norwegian Cruise Line">Norwegian Cruise Line</option>
+        <option value="Carnival Cruises">Carnival Cruises</option>
+        <option value="Deseret Cruises International">Deseret Cruises International</option>
+      </select>
+
+      <label for="cruiseName">Cruise Ship Name:</label>
+      <input type="text" id="cruiseName" name="cruiseName" placeholder="e.g., Ocean Explorer">
+
+      <label for="departurePort">Departure Port:</label>
+      <input type="text" id="departurePort" name="departurePort" placeholder="e.g., Miami, FL" required>
+
+      <label for="destination">Destination:</label>
+      <input type="text" id="destination" name="destination" placeholder="e.g., Caribbean Islands" required>
+
+      <label for="departureDate">Departure Date:</label>
+      <input type="date" id="departureDate" name="departureDate" required>
+
+      <label for="returnDate">Return Date:</label>
+      <input type="date" id="returnDate" name="returnDate" required>
+
+      <!-- Accommodation & Preferences -->
+      <h4>Cabin & Preferences</h4>
+      <label for="cabinType">Cabin Type:</label>
+      <select id="cabinType" name="cabinType" required>
+        <option value="">-- Select Cabin Type --</option>
+        <option value="Interior">Interior</option>
+        <option value="Ocean View">Ocean View</option>
+        <option value="Balcony">Balcony</option>
+        <option value="Suite">Suite</option>
+      </select>
+
+      <label for="numGuests">Number of Guests:</label>
+      <input type="number" id="numGuests" name="numGuests" min="1" max="10" value="1" required>
+
+      <label for="specialRequests">Special Requests:</label>
+      <textarea id="specialRequests" name="specialRequests" rows="3" placeholder="Dietary needs, accessibility, celebrations, etc."></textarea>
+
+      <!-- Payment Section -->
+      <h4>Payment Details</h4>
+      <label for="paymentMethod">Payment Method:</label>
+      <select id="paymentMethod" name="paymentMethod" required>
+        <option value="">-- Choose Payment Method --</option>
+        <option value="Credit Card">Credit Card</option>
+        <option value="PayPal">PayPal</option>
+        <option value="Bank Transfer">Bank Transfer</option>
+        <option value="M-Pesa">M-Pesa</option>
+      </select>
+
+      <label for="totalAmount">Estimated Total (USD):</label>
+      <input type="number" id="totalAmount" name="totalAmount" placeholder="e.g., 2500" required>
+
+      <!-- Submit -->
+      <button type="submit">Confirm Booking</button>
+    </form>
+  </div>
+</div>
   <!-- Footer -->
   <footer>
     <div class="footer-left">
-      <p><i>&copy;2024@Celestial Cruises.|From Shore to More.</p></i>
+      <p><i>&copy;2024@DeseretCruisesInternational.From Shore to More.</p></i>
     </div>
     <div class="footer-right">
       <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -71,7 +158,8 @@
       <a href="#"><i class="fab fa-twitter"></i></a>
     </div>
   </footer>
-
-  <script src="script/home.js"></script>
+<script src="script/hero.js"></script>
+  <script src="script/bookings.js"></script>
+  <script src="script/confirm.js"></script>
 </body>
 </html>
