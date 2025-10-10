@@ -992,7 +992,7 @@ form button:hover {
 
 .director .bio h3 {
   margin: 0 0 10px 0;
-  color: orangered;
+  color: goldenrod;
   font-size: 1.25rem; /* slightly larger */
 }
 
@@ -1135,7 +1135,7 @@ footer p {
 }
 
 #contact-us h2 {
-  color:#FF4500;
+  color:goldenrod;
   text-align: center;
   margin-bottom: 1rem;
   font-size: 2rem;
@@ -1165,13 +1165,13 @@ footer p {
   min-width: 300px;
   display: flex;
   flex-direction: column;
-  color: #FF4500;
+  color:goldenrod;
 }
 
 .contact-container form label {
   margin-bottom: 0.5rem;
   font-weight: bold;
-  color: #FF4500;
+  color: goldenrod;
 }
 
 .contact-container form input,
@@ -1193,7 +1193,7 @@ footer p {
   padding: 0.8rem;
   background-color: #003366;
   color: white;
-  border: 2px solid #FF4500;
+  border: 2px solid goldenrod;
   border-radius: 5px;
   cursor: pointer;
   font-weight: bold;
@@ -1219,7 +1219,7 @@ footer p {
 }
 
 .contact-info h3 {
-  color: #FF4500;
+  color: goldenrod;
   /* Ensure the main headings are centered and have enough bottom margin */
   text-align: center;
   margin-bottom: 1.5rem; 

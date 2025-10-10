@@ -213,17 +213,29 @@ table tbody tr:hover {
 /* Footer */
 footer {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   background: #003366;
   color: white;
   padding: 1rem;
+  flex-direction: column;
+  text-align: center;
 }
+
+footer p {
+  margin: 0;
+  font-style: italic;
+}
+
+.footer-right {
+  margin-top: 0.5rem;
+}
+
 .footer-right a {
   color: white;
-  margin-left: 1rem;
+  margin: 0 0.5rem;
   font-size: 1.2rem;
+  text-decoration: none;
 }
-.footer-right a:hover {
-  color: orange;
-}
+
+.footer-right a:hover { color: orange; }
