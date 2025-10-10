@@ -130,7 +130,75 @@ footer p {
 }
 
 .footer-right a:hover { color: orange; }
+/* Hamburger icon (hidden on desktop) */
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
 
+/* Mobile view */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  nav {
+    display: none;
+    flex-direction: column;
+    background: #003366;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+    border-top: 1px solid #ccc;
+  }
+
+  nav.show {
+    display: flex;
+  }
+}
+/* (Optional) Toggle icon turns into X when active */
+.menu-toggle.active i::before {
+  content: "\f00d"; /* Font Awesome “times” icon */
+}
+/* ================= NAVIGATION ================= */
+#nav-links ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+#nav-links a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  #nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #003366;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+  }
+
+  #nav-links.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+    cursor: pointer;
+  }
+}
 /* ===== RESPONSIVE DESIGN ===== */
 @media (max-width: 992px) {
   .header-top {

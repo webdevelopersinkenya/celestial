@@ -36,36 +36,75 @@ header {
   font-size: 0.9rem;
   text-align: right;
 }
-
-/* ================= NAVIGATION ================= */
-nav ul {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1.5rem;
-  list-style: none;
-  background: #002244;
-  padding: 0.5rem;
-  flex-wrap: wrap;
+/* ---------- HAMBURGER MENU ---------- */
+/* Hamburger icon (hidden on desktop) */
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
 }
 
-nav ul li a {
-  font-weight: bold;
+/* Mobile view */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  nav {
+    display: none;
+    flex-direction: column;
+    background: #003366;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+    border-top: 1px solid #ccc;
+  }
+
+  nav.show {
+    display: flex;
+  }
+}
+/* (Optional) Toggle icon turns into X when active */
+.menu-toggle.active i::before {
+  content: "\f00d"; /* Font Awesome “times” icon */
+}
+/* ================= NAVIGATION ================= */
+#nav-links ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+#nav-links a {
   color: white;
   text-decoration: none;
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
-  text-shadow:
-    -1px -1px 0 orange,
-     1px -1px 0 orange,
-    -1px  1px 0 orange,
-     1px  1px 0 orange;
 }
 
-nav ul li a:hover {
-  background-color: orange;
-  color: #003366;
-  text-shadow: none;
+/* Mobile */
+@media (max-width: 768px) {
+  #nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #003366;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+  }
+
+  #nav-links.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+    cursor: pointer;
+  }
 }
 
 /* ================= HERO SECTION ================= */

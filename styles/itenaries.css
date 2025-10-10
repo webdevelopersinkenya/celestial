@@ -175,14 +175,19 @@ table tbody tr:hover {
   font-size: 0.9rem;
 }
 
-/* Horizontal row of ships */
+/* ================= SHIPS SECTION ================= */
+
+/* Ship Row Layout */
 .ships-row {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 10px;
+  gap: 15px;
   margin-top: 20px;
+  padding: 0 10px;
 }
+
+/* Individual Ship Card */
 .ship-card {
   background: #fff;
   border: 1px solid goldenrod;
@@ -191,25 +196,65 @@ table tbody tr:hover {
   width: 220px;
   text-align: left;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
 }
+
 .ship-card:hover {
   transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
 }
+
 .ship-card h3 {
   margin-top: 0;
   font-size: 1.2rem;
   color: #002244;
-  font-style: italic; /* Makes text italic */
+  font-style: italic;
 }
 
 .ship-card p {
   margin: 4px 0;
   font-size: 0.9rem;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color:black;
+  color: black;
 }
 
+/* ================= RESPONSIVE DESIGN ================= */
+
+/* Medium screens (tablets) */
+@media (max-width: 992px) {
+  .ships-row {
+    justify-content: space-around;
+    gap: 20px;
+  }
+
+  .ship-card {
+    width: 45%; /* two per row on tablets */
+  }
+}
+
+/* Small screens (phones) */
+@media (max-width: 600px) {
+  .ships-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .ship-card {
+    width: 90%; /* full width on mobile */
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .ship-card h3 {
+    font-size: 1rem;
+  }
+
+  .ship-card p {
+    font-size: 0.
+
+  }
+}
 /* Footer */
 footer {
   display: flex;
@@ -239,3 +284,119 @@ footer p {
 }
 
 .footer-right a:hover { color: orange; }
+/* Hamburger icon (hidden on desktop) */
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  nav {
+    display: none;
+    flex-direction: column;
+    background: #003366;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+    border-top: 1px solid #ccc;
+  }
+
+  nav.show {
+    display: flex;
+  }
+}
+/* (Optional) Toggle icon turns into X when active */
+.menu-toggle.active i::before {
+  content: "\f00d"; /* Font Awesome “times” icon */
+}
+/* ================= NAVIGATION ================= */
+#nav-links ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+#nav-links a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  #nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #003366;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+  }
+
+  #nav-links.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+    cursor: pointer;
+  }
+}
+/* ================= FOOTER ================= */
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #003366;
+  color: white;
+  padding: 1rem;
+  flex-direction: column;
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+  font-style: italic;
+}
+
+.footer-right {
+  margin-top: 0.5rem;
+}
+
+.footer-right a {
+  color: white;
+  margin: 0 0.5rem;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
+.footer-right a:hover { color: orange; }
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 992px) {
+  .director { width: 48%; }
+}
+
+@media (max-width: 768px) {
+  .header-top { flex-direction: column; text-align: center; }
+  .company-address p { text-align: center; }
+  nav ul { flex-direction: column; gap: 0.5rem; }
+  nav ul li a { width: 100%; text-align: center; }
+}
+
+@media (max-width: 600px) {
+  .directors { flex-direction: column; }
+  .director { width: 100%; margin-bottom: 20px; }
+  .director img { width: 140px; height: 140px; }
+}
