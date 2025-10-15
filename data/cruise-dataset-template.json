@@ -34,15 +34,7 @@
               "itinerary": "Búzios, Salvador, Ilhéus",
               "price_or_rates": null
             }
-          ],
-          "contacts": [
-            {
-              "country": "Brazil",
-              "phone": "(+55) 11 3588-8100",
-              "fax": null,
-              "email": "contato@msccruzeiros.com.br",
-              "website": "www.msccruzeiros.com.br"
-            }
+        
           ]
         },
         {
@@ -113,15 +105,7 @@
           "itinerary": "San Francisco Carlifornia, Juneau, Skagway, Tracy Arm Fjord, Ketchikan (Alaska), Prince Rupert BC Canada",
           "price_or_rates": null
         }
-      ],
-      "contacts": [
-        {
-          "country": "USA",
-          "phone": "1-800-CARNIVAL, 1-800-764-7419, 1-800-819-3902",
-          "fax": null,
-          "email": null,
-          "website": "https://www.carnival.com"
-        }
+      
       ]
     },
     {
@@ -156,15 +140,7 @@
           "itinerary": "Seattle Washington, Juneau, Skagway, Glacier Bay, Ketchikan (Alaska), Victoria BC Canada",
           "price_or_rates": null
         }
-      ],
-      "contacts": [
-        {
-          "country": "USA",
-          "phone": "1-800-PRINCESS, 1-800-774-6237",
-          "fax": null,
-          "email": null,
-          "website": "https://book.princess.com"
-        }
+     
       ]
     },
     {
@@ -197,16 +173,6 @@
           "home_port": "Fort Lauderdale, Miami, Barcelona, Civitavecchia",
           "itinerary": "Civitavecchia, Naples, Barcelona, Palma de Mallorca Spain, La Spezia",
           "price_or_rates": null
-        }
-
-      ],
-      "contacts": [
-        {
-          "country": "USA",
-          "phone": "(305) 341-0204, (800) 465-3595",
-          "fax": null,
-          "email": null,
-          "website": "https://www.royalcaribbean.com"
         }
       ]
     },
@@ -241,15 +207,7 @@
           "itinerary": "7 Days, round trip Caribbean Great Stirrup Cay Dominican Republic",
           "price_or_rates": null
         }
-      ],
-      "contacts": [
-        {
-          "country": "South Africa",
-          "phone": "(+27) (0) 10 442 6415",
-          "fax": null,
-          "email": null,
-          "website": null
-        }
+      
       ]
     }
   ]
