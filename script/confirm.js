@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       try {
 const response = await fetch(
-  "https://script.google.com/macros/s/AKfycbzz-bcniWl0bjJDkkqCYR_3ER98QeeQl93PW0ky9dKHuxOnzgNeRLNUYWAmCEsJ6VmNFA/exec",
+  "https://script.google.com/macros/s/AKfycbwW92Hm64HP2latYaY1zM6cU5Gj4mWAiUngeSLrXOmiXYK8mmojCxhyuLcRwexndf98/exec",
   {
     method: "POST",
     mode: "cors",
