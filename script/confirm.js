@@ -30,13 +30,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
       try {
 const response = await fetch(
-  "https://script.google.com/macros/s/AKfycbwxN4IIQNHbaRUI-M9yNux0yEodjyu9el_73MExfPJZwOGwZ4lhK_WSxrqccEyi4WnwQg/exec",
+  "https://script.google.com/macros/s/AKfycbzz-bcniWl0bjJDkkqCYR_3ER98QeeQl93PW0ky9dKHuxOnzgNeRLNUYWAmCEsJ6VmNFA/exec",
   {
     method: "POST",
+    mode: "cors",
     body: JSON.stringify(formData),
     headers: { "Content-Type": "application/json" },
   }
 );
+
 
         if (result.result === "Success") {
           // ✅ Show branded popup (instead of alert)
