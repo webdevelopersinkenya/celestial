@@ -38,8 +38,6 @@ const response = await fetch(
   }
 );
 
-
-
         if (result.result === "Success") {
           // ✅ Show branded popup (instead of alert)
           thankYouMsg.textContent = `Thank you, ${fullName}! Your booking has been received successfully.`;
