@@ -7,105 +7,186 @@
           "region": "South American Market",
           "ships": [
             {
-              "name": "Preziosa",
-              "class": "Fantasia Class",
+              "name": "Meravigla",
+              "class": "Meravigla Class",
               "home_port": "Santos (Brazil)",
               "itinerary": "Búzios, Salvador, Ilhéus",
               "price_or_rates": null
             },
             {
-              "name": "Preziosa",
-              "class": "Fantasia Class",
+              "name": "Seaside ",
+              "class": "Seaside Class",
               "home_port": "Santos (Brazil)",
               "itinerary": "Búzios, Salvador, Ilhéus",
               "price_or_rates": null
             },
             {
-              "name": "Preziosa",
-              "class": "Fantasia Class",
+              "name": "Musica ",
+              "class": "Musica Class",
               "home_port": "Santos (Brazil)",
               "itinerary": "Búzios, Salvador, Ilhéus",
               "price_or_rates": null
             },
             {
-              "name": "Preziosa",
+              "name": "Lirica",
+              "class": "Lirica Class",
+              "home_port": "Santos (Brazil)",
+              "itinerary": "Búzios, Salvador, Ilhéus",
+              "price_or_rates": null
+            },
+              {
+              "name": "Fantasia",
               "class": "Fantasia Class",
               "home_port": "Santos (Brazil)",
               "itinerary": "Búzios, Salvador, Ilhéus",
               "price_or_rates": null
-            }
-        
-          ]
-        },
-        {
-          "region": "Asian Market",
-          "ships": [
-            {
+            },
+             {
               "name": "Bellissima",
               "class": "Meraviglia Class",
               "home_port": "Keelung Taiwan, Naha, Tokyo (Japan)",
               "itinerary": "Shanghai China, Tokyo Japan",
               "price_or_rates": null
             },
-            {
+             {
               "name": "Splendida",
               "class": "Fantasia Class",
               "home_port": null,
               "itinerary": null,
               "price_or_rates": null
             },
-            {
-              "name": "Lirica",
-              "class": "Lirica Class",
-              "home_port": null,
-              "itinerary": null,
-              "price_or_rates": null
-            },
-            {
+              {
               "name": "Virtuosa",
               "class": "Meraviglia-plus Class",
               "home_port": null,
               "itinerary": null,
               "price_or_rates": null
             }
-            
+          ]
+        },
+        {
+          "region": "US Market",
+          "ships": [
+            {
+              "name": "Meravigla",
+              "class": "Meraviglia Class",
+              "home_port": "Brooklyn Cruise Terminal,Barcelona,Marseille,Parlemo.",
+              "itinerary": "Newyork,Orlando Florida,Nassau,Ocean Cay(Bahamas)",
+              "price_or_rates": null
+            },
+            {
+              "name": "World America",
+              "class": "World Class",
+              "home_port": "Miami",
+              "itinerary": "Miami,Costa Maya,Cozumel(Mexico),Roatan(Honduras),Ocean cay,Puerto Rico,Puerto Plata",
+              "price_or_rates": null
+            },
+            {
+              "name": "Seaside ",
+              "class": "Seaside Class",
+              "home_port": "Current, Miami   November Onwards… Galveston, Texas",
+              "itinerary": "Miami,Ocean Cay,Nassau,Puerto Rico,Puerto Plata",
+              "price_or_rates": null
+            },
+            {
+              "name": "Seashore",
+              "class": "Seaside Class",
+              "home_port": "Port Canaveral, Orlando Florida",
+              "itinerary": "Orlando Florida,Nassau,Ocean Cay,Costa Maya,Cozumel",
+              "price_or_rates": null
+            },
+              {
+              "name": "Grandiosa",
+              "class": "Grandiosa Class",
+              "home_port": "Port Canaveral, Orlando Florida Winter 2026 -2027",
+              "itinerary": "",
+              "price_or_rates": null
+            },
+              {
+              "name": "Seaside",
+              "class": "Seaside Class",
+              "home_port": "Miami,Barcelona,Naples,Parlemo",
+              "itinerary": null,
+              "price_or_rates": null
+            },
+             {
+              "name": "Divina",
+              "class": "Fantasia Class",
+              "home_port": "Naples, Civitavecchia, Kusadasi, Miami",
+              "itinerary": "Naples,Civitavecchia, Mykonos Island, Kusadasi, Santorini",
+              "price_or_rates": null
+            },
+             {
+              "name": "Seaview",
+              "class": "Seaside Class",
+              "home_port": "Barcelona,Civitavecchia,Genoa, Santos(Brazil)",
+              "itinerary": "Palma De Mallorca, Barcelona, Cannes(France), Genoa, Spezia,Civitavecchia",
+              "price_or_rates": null
+            }
           ]
 
         }
       ]
     },
     {
-      "name": "Carnival Cruises",
+      "name": "European Market MSC.",
       "ships": [
         {
-          "name": "Carnival Horizon",
-          "class": "Vista",
-          "home_port": "Miami (Florida)",
-          "itinerary": "Miami Florida, Celebration Key Bahamas, Carnival Grand Bahama Island, Grand Cayman Island, George Town Harbour",
+          "name": "World Europa",
+          "class": "World Class",
+          "home_port": "Genoa,Marseille,Barcelona,Messina, Naples",
+          "itinerary": "Genoa,Marseille,Barcelona,Messina, Naples",
           "price_or_rates": null
         },
         {
-          "name": "Carnival Horizon",
-          "class": "Conquest",
-          "home_port": "Port Canaveral (Orlando, Florida)",
-          "itinerary": "Orlando Florida, Celebration Key Bahamas, Carnival Grand Bahama Island, Nassau, Half moon Cay Bahamas",
+          "name": "Meravigla",
+          "class": "Meravigla-plus Class",
+          "home_port": "Dubai, Kiel, Copenhagen, Southampton, Barcelona, Genoa",
+          "itinerary": "Northern Europe Norway, Dubai Based(winter) Grand Voyages",
           "price_or_rates": null
         },
         {
-          "name": "Carnival Horizon",
-          "class": "Dream",
-          "home_port": "Galveston Texas",
-          "itinerary": "Galveston Texas, Cozumel Mexico, Progreso, Merida, Yucatan Mexico",
+          "name": "Virtuosa",
+          "class": "Meravigla-plus Class",
+          "home_port": "Southampton, Dubai, Malaga, Lisbon",
+          "itinerary": "Northern Europe Southampton, Norway, Denmark, Spain, France",
           "price_or_rates": null
         },
         {
-          "name": "Carnival Horizon",
-          "class": "Spirit",
-          "home_port": "Galveston Texas",
-          "itinerary": "San Francisco Carlifornia, Juneau, Skagway, Tracy Arm Fjord, Ketchikan (Alaska), Prince Rupert BC Canada",
+          "name": "Grandiosa",
+          "class": "Meravigla-plus Class",
+          "home_port": "Valencia,Marseille,Genoa,Port Canaveral",
+          "itinerary": "Valencia, Marseille,Genoa, Civitavecchia, Parlemo, Ibiza",
+          "price_or_rates": null
+        },
+       {
+          "name": "Seaside",
+          "class": "Seaside Class",
+          "home_port": "Palermo, Barcelona,Naples,Marseille, Miami",
+          "itinerary": "Naples,Livorno,Florence - Pisa(Italy), Marseille, Barcelona, Tunis",
+          "price_or_rates": null
+        },
+         {
+          "name": "Splendida",
+          "class": "Fantasia Class",
+          "home_port": "Marseille, Genoa, Barcelona, Parlemo,Valencia",
+          "itinerary": "Marseiile, Tarragona,Valencia,Livorno, Civitavecchia,Genoa",
+          "price_or_rates": null
+        },
+         {
+          "name": "Orchestra",
+          "class": "Musica Class",
+          "home_port": "Civitavecchia, Marseille, Genoa,Barcelona, Valencia",
+          "itinerary": "Barcelona, Ibiza,Cagliari, Civitavecchia,Genoa, Marseille",
+          "price_or_rates": null
+        },
+         {
+          "name": "Preziosa",
+          "class": "Fantasia Class",
+          "home_port": "Harmburg, Southampton,Le Havre, Santos, Rotterdam",
+          "itinerary": "Harmburg, Germany and Different Ports in  Norway",
           "price_or_rates": null
         }
-      
       ]
     },
     {
@@ -120,24 +201,24 @@
           "price_or_rates": null
         },
         {
-          "name": "Royal Princess",
-          "class": "Royal-Class",
-          "home_port": "Seattle, Los Angeles, Sydney, Auckland",
-          "itinerary": "Seattle Washington, Juneau, Skagway, Glacier Bay, Ketchikan (Alaska), Victoria BC Canada",
+          "name": "Sun Princess",
+          "class": "Sphere-Class",
+          "home_port": "Fort Lauderdale, Barcelona,Piraeus-Athens, Civitavecchia, Istanbul",
+          "itinerary": "Grand Voyages of upto 21 days",
           "price_or_rates": null
         },
         {
-          "name": "Royal Princess",
-          "class": "Royal-Class",
-          "home_port": "Seattle, Los Angeles, Sydney, Auckland",
-          "itinerary": "Seattle Washington, Juneau, Skagway, Glacier Bay, Ketchikan (Alaska), Victoria BC Canada",
+          "name": "Star Princess",
+          "class": "Sphere-Class",
+          "home_port": "Fort Lauderdale, Seattle Washington",
+          "itinerary": "Barcelona, Marseille, Civitavecchia, Naples, Parlemo,Cartagena Spain, Gibraltar",
           "price_or_rates": null
         },
         {
-          "name": "Royal Princess",
-          "class": "Royal-Class",
-          "home_port": "Seattle, Los Angeles, Sydney, Auckland",
-          "itinerary": "Seattle Washington, Juneau, Skagway, Glacier Bay, Ketchikan (Alaska), Victoria BC Canada",
+          "name": "Crown Princess",
+          "class": "Crown-Class",
+          "home_port": "Sydney, Brisbane, Fremantle(Australia) San Juan, Auckland",
+          "itinerary": "Grand voyages of upto 114 days",
           "price_or_rates": null
         }
      
@@ -154,24 +235,24 @@
           "price_or_rates": null
         },
         {
-          "name": "Allure of the Seas",
-          "class": "Oasis Class",
-          "home_port": "Fort Lauderdale, Miami, Barcelona, Civitavecchia",
-          "itinerary": "Civitavecchia, Naples, Barcelona, Palma de Mallorca Spain, La Spezia",
+          "name": "Anthem of the Seas",
+          "class": "Quantam Class",
+          "home_port": "Sydney, Seattle Washington, Singapore",
+          "itinerary": "Seattle Washington, Sitka, Skagway, Tracy Arm Fjord, Juneau, Victoria BC Canada",
           "price_or_rates": null
         },
         {
-          "name": "Allure of the Seas",
-          "class": "Oasis Class",
-          "home_port": "Fort Lauderdale, Miami, Barcelona, Civitavecchia",
-          "itinerary": "Civitavecchia, Naples, Barcelona, Palma de Mallorca Spain, La Spezia",
+          "name": "Independence of the Seas",
+          "class": "Freedom Class",
+          "home_port": "Miami Florida,Cape Liberty(New Jersey), Southampton",
+          "itinerary": "Southampton, Vigo, Lisbon, Cadiz,La Coruna,Bilbao (Spain)",
           "price_or_rates": null
         },
         {
-          "name": "Allure of the Seas",
-          "class": "Oasis Class",
-          "home_port": "Fort Lauderdale, Miami, Barcelona, Civitavecchia",
-          "itinerary": "Civitavecchia, Naples, Barcelona, Palma de Mallorca Spain, La Spezia",
+          "name": "Brilliance of the Seas",
+          "class": "Radiance Class",
+          "home_port": "San Juan, Piraeus-Athens,New Orleans,Civitavecchia, Boston",
+          "itinerary": "Piraeus-Athens, Santorini, Rhodes Island(Greece) Limassol(Cyprus) Bodrum, Kusadasi (Turkey)",
           "price_or_rates": null
         }
       ]
@@ -187,8 +268,8 @@
           "price_or_rates": null
         },
          {
-          "name": "Norwegian Aqua",
-          "class": "Prima Class",
+          "name": "Norwegian Bliss",
+          "class": "Break Away Plus Class",
           "home_port": "Miami Florida, New York, Port Canaveral",
           "itinerary": "7 Days, round trip Caribbean Great Stirrup Cay Dominican Republic",
           "price_or_rates": null
@@ -196,15 +277,15 @@
          {
           "name": "Norwegian Aqua",
           "class": "Prima Class",
-          "home_port": "Miami Florida, New York, Port Canaveral",
-          "itinerary": "7 Days, round trip Caribbean Great Stirrup Cay Dominican Republic",
+          "home_port": "Seattle Washington, Los Angeles, New York",
+          "itinerary": "7 Days, round trip Alaska Dawes Glacier, Ketchikan Sitka",
           "price_or_rates": null
         },
          {
-          "name": "Norwegian Aqua",
-          "class": "Prima Class",
-          "home_port": "Miami Florida, New York, Port Canaveral",
-          "itinerary": "7 Days, round trip Caribbean Great Stirrup Cay Dominican Republic",
+          "name": "Norwegian Dawn",
+          "class": "Dawn Class",
+          "home_port": "Tampa Florida, Lisbon, Barcelona, Southampton",
+          "itinerary": "10 Days, round trip Ireland Belfast, Dublin, Cork Galway",
           "price_or_rates": null
         }
       
