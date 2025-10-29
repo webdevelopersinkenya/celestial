@@ -46,13 +46,15 @@ document.addEventListener("DOMContentLoaded", () => {
       try {
         // ✅ Replace with your actual deployed Google Apps Script URL
         const response = await fetch(
-          "https://script.google.com/macros/s/AKfycbwFCdIF46L9FAUsRbuKkLZOTu_doDCNT0oB6Y97sF0wgTjq6ZFYITuWV5lcF_bz7f4kqw/exec",
-          {
-            method: "POST",
-            body: JSON.stringify(formData),
-            headers: { "Content-Type": "application/json" },
-          }
-        );
+  "https://script.google.com/macros/s/AKfycbxCC3lSBeJPsMtxT5koUfvWN6jg70XKVaMuzkMADZo7Ctl4Td9HIN_jH5p_hgzXClQw/exec",
+  {
+    method: "POST",
+    mode: "cors", // ✅ allow CORS
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(formData),
+  }
+);
+
 
         if (!response.ok) throw new Error(`Server error ${response.status}`);
 
