@@ -29,16 +29,32 @@ document.addEventListener("DOMContentLoaded", () => {
       const fullName = formData.fullName || formData.name || "Valued Guest";
 
       try {
-        const response = await fetch(
-          "https://script.google.com/macros/s/AKfycbyouu0oojzeCUzm1OEG7AcJr1CxjTyQ8IBM0Q_fhxbyfSU5r3cIikBoQcfpe0ZacMaFtQ/exec",
-          {
-            method: "POST",
-            body: JSON.stringify(formData),
-            headers: { "Content-Type": "application/json" },
-          }
-        );
 
-        const result = await response.json();
+        MailApp.sendEmail({
+  to: "mirah.gabriel1969@gmail.com",
+  subject: "New Booking Received",
+  htmlBody: `<p><b>${payload.fullName}</b> just made a booking.</p>
+             <p>Email: ${payload.email}</p>
+             <p>Phone: ${payload.phone}</p>
+             <p>Message: ${payload.message}</p>`
+});
+
+        // Convert FormData to URL-encoded string
+const urlEncoded = new URLSearchParams(formData);
+
+// ✅ Use your deployed Google Apps Script Web App URL here:
+const webAppUrl = "https://script.google.com/macros/s/AKfycbxTaFW4ezIQMv_amlvLeLf2ThSLTJcF7g_B2XRjPtOc_0vFwUJwKvWghb54x0B2eNbduA/exec";
+
+const response = await fetch(webAppUrl, {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8",
+  },
+  body: urlEncoded.toString(),
+});
+
+const result = await response.json();
+
 
         if (result.result === "Success") {
           // ✅ Show branded popup (instead of alert)
