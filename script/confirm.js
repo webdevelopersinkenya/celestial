@@ -4,15 +4,19 @@ document.addEventListener("DOMContentLoaded", () => {
   const openBtn = document.getElementById("openBookingHero");
   const closeBtn = document.getElementById("closeModal");
 
-  // Open modal
   openBtn?.addEventListener("click", () => (modal.style.display = "block"));
-
-  // Close modal
   closeBtn?.addEventListener("click", () => (modal.style.display = "none"));
-
-  // Close when clicking outside modal
   window.addEventListener("click", (event) => {
     if (event.target === modal) modal.style.display = "none";
+  });
+
+  // --- Thank You Popup Elements ---
+  const thankYouBox = document.getElementById("thankYouBox");
+  const thankYouMsg = document.getElementById("thankYouMessage");
+  const closeThankYou = document.getElementById("closeThankYou");
+
+  closeThankYou.addEventListener("click", () => {
+    thankYouBox.style.display = "none";
   });
 
   // --- Form Submission Logic ---
@@ -22,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
       e.preventDefault();
 
       const formData = Object.fromEntries(new FormData(form).entries());
-      const fullName = formData.fullName || formData.name || "Valued Guest"; // fallback
+      const fullName = formData.fullName || formData.name || "Valued Guest";
 
       try {
         const response = await fetch(
@@ -37,11 +41,15 @@ document.addEventListener("DOMContentLoaded", () => {
         const result = await response.json();
 
         if (result.result === "Success") {
-          // Personalized thank-you message
-          alert(`🌊 Deseret Cruises International says: Thank you, ${fullName}! Your booking has been received successfully.`);
-          
+          // ✅ Show branded popup (instead of alert)
+          thankYouMsg.textContent = `Thank you, ${fullName}! Your booking has been received successfully.`;
+          thankYouBox.style.display = "flex";
+
           form.reset();
           modal.style.display = "none";
+
+          // Optional auto-close after 5 seconds
+          setTimeout(() => (thankYouBox.style.display = "none"), 5000);
         } else {
           alert("⚠️ There was a problem recording your booking. Please try again.");
         }
