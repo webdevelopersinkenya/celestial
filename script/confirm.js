@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       try {
 const response = await fetch(
-  "https://script.google.com/macros/s/AKfycbx4sbJBja4AZe-KIoXblP0fQ6DMW28cmtQVm-UvqLrhQj9jogGuAymv4ClXS6_T0wPCKw/exec",
+  "https://script.google.com/macros/s/AKfycbwxN4IIQNHbaRUI-M9yNux0yEodjyu9el_73MExfPJZwOGwZ4lhK_WSxrqccEyi4WnwQg/exec",
   {
     method: "POST",
     body: JSON.stringify(formData),
