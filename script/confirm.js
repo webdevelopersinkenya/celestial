@@ -1,34 +1,28 @@
 document.addEventListener("DOMContentLoaded", () => {
   // --- Modal Logic ---
   const modal = document.getElementById("bookingModal");
-  const openBtn = document.getElementById("openBookingHero"); // ✅ fixed ID
-  const closeBtn = document.getElementById("closeModal"); // ✅ match your HTML
+  const openBtn = document.getElementById("openBookingHero");
+  const closeBtn = document.getElementById("closeModal");
 
-  if (openBtn) {
-    openBtn.onclick = () => {
-      modal.style.display = "block";
-    };
-  }
+  // Open modal
+  openBtn?.addEventListener("click", () => (modal.style.display = "block"));
 
-  if (closeBtn) {
-    closeBtn.onclick = () => {
-      modal.style.display = "none";
-    };
-  }
+  // Close modal
+  closeBtn?.addEventListener("click", () => (modal.style.display = "none"));
 
-  window.onclick = (event) => {
-    if (event.target === modal) {
-      modal.style.display = "none";
-    }
-  };
+  // Close when clicking outside modal
+  window.addEventListener("click", (event) => {
+    if (event.target === modal) modal.style.display = "none";
+  });
 
   // --- Form Submission Logic ---
   const form = document.getElementById("bookingForm");
   if (form) {
-    form.addEventListener("submit", async function (e) {
+    form.addEventListener("submit", async (e) => {
       e.preventDefault();
 
-      const formData = Object.fromEntries(new FormData(this).entries());
+      const formData = Object.fromEntries(new FormData(form).entries());
+      const fullName = formData.fullName || formData.name || "Valued Guest"; // fallback
 
       try {
         const response = await fetch(
@@ -43,14 +37,17 @@ document.addEventListener("DOMContentLoaded", () => {
         const result = await response.json();
 
         if (result.result === "Success") {
-          alert("✅ Thank you! Your booking has been recorded successfully.");
-          this.reset();
+          // Personalized thank-you message
+          alert(`🌊 Deseret Cruises International says: Thank you, ${fullName}! Your booking has been received successfully.`);
+          
+          form.reset();
           modal.style.display = "none";
         } else {
           alert("⚠️ There was a problem recording your booking. Please try again.");
         }
       } catch (error) {
-        alert("❌ Error: " + error.message);
+        console.error("Booking Error:", error);
+        alert("❌ Network or server error. Please try again later.");
       }
     });
   }
