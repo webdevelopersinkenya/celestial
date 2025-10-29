@@ -15,9 +15,21 @@ document.addEventListener("DOMContentLoaded", () => {
   const thankYouMsg = document.getElementById("thankYouMessage");
   const closeThankYou = document.getElementById("closeThankYou");
 
-  closeThankYou.addEventListener("click", () => {
+  closeThankYou?.addEventListener("click", () => {
     thankYouBox.style.display = "none";
   });
+
+  // --- Create Loading Spinner ---
+  const loadingOverlay = document.createElement("div");
+  loadingOverlay.id = "loadingOverlay";
+  loadingOverlay.innerHTML = `
+    <div class="spinner"></div>
+    <p class="loading-text">Processing your booking, please wait...</p>
+  `;
+  document.body.appendChild(loadingOverlay);
+
+  // --- Hide initially ---
+  loadingOverlay.style.display = "none";
 
   // --- Form Submission Logic ---
   const form = document.getElementById("bookingForm");
@@ -28,27 +40,31 @@ document.addEventListener("DOMContentLoaded", () => {
       const formData = Object.fromEntries(new FormData(form).entries());
       const fullName = formData.fullName || formData.name || "Valued Guest";
 
-      try {
-const response = await fetch(
-  "https://script.google.com/macros/s/AKfycbwW92Hm64HP2latYaY1zM6cU5Gj4mWAiUngeSLrXOmiXYK8mmojCxhyuLcRwexndf98/exec",
-  {
-    method: "POST",
-    mode: "cors",
-    body: JSON.stringify(formData),
-    headers: { "Content-Type": "application/json" },
-  }
-);
+      // Show loading spinner
+      loadingOverlay.style.display = "flex";
 
+      try {
+        // ✅ Replace with your actual deployed Google Apps Script URL
+        const response = await fetch(
+          "https://script.google.com/macros/s/AKfycbwFCdIF46L9FAUsRbuKkLZOTu_doDCNT0oB6Y97sF0wgTjq6ZFYITuWV5lcF_bz7f4kqw/exec",
+          {
+            method: "POST",
+            body: JSON.stringify(formData),
+            headers: { "Content-Type": "application/json" },
+          }
+        );
+
+        if (!response.ok) throw new Error(`Server error ${response.status}`);
+
+        const result = await response.json();
 
         if (result.result === "Success") {
-          // ✅ Show branded popup (instead of alert)
-          thankYouMsg.textContent = `Thank you, ${fullName}! Your booking has been received successfully.`;
+          thankYouMsg.textContent = `🌊 Deseret Cruises International says: Thank you, ${fullName}! Your booking has been received successfully.`;
           thankYouBox.style.display = "flex";
 
           form.reset();
           modal.style.display = "none";
 
-          // Optional auto-close after 5 seconds
           setTimeout(() => (thankYouBox.style.display = "none"), 5000);
         } else {
           alert("⚠️ There was a problem recording your booking. Please try again.");
@@ -56,6 +72,9 @@ const response = await fetch(
       } catch (error) {
         console.error("Booking Error:", error);
         alert("❌ Network or server error. Please try again later.");
+      } finally {
+        // Hide spinner
+        loadingOverlay.style.display = "none";
       }
     });
   }
